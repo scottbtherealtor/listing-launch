@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaser Post 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1080px;
+    background: #0A0A0A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Subtle radial glow */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(200,164,78,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  /* Grain overlay */
+  body::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 80px;
+  }
+
+  /* Thin gold horizontal lines */
+  .line-top, .line-bottom {
+    position: absolute;
+    left: 80px; right: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(200,164,78,0.3), transparent);
+  }
+
+  .line-top { top: 160px; }
+  .line-bottom { bottom: 160px; }
+
+  .main-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 96px;
+    letter-spacing: 8px;
+    color: #C8A44E;
+    line-height: 1.1;
+    position: relative;
+  }
+
+  /* Gold shimmer on text */
+  .main-text span {
+    background: linear-gradient(135deg, #C8A44E 0%, #E8D5A0 40%, #C8A44E 60%, #997A30 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .sub-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24px;
+    color: rgba(200,164,78,0.5);
+    letter-spacing: 2px;
+    margin-top: 24px;
+  }
+
+  /* Corner accents */
+  .corner {
+    position: absolute;
+    width: 40px; height: 40px;
+  }
+
+  .corner-tl { top: 60px; left: 60px; border-top: 1px solid rgba(200,164,78,0.2); border-left: 1px solid rgba(200,164,78,0.2); }
+  .corner-tr { top: 60px; right: 60px; border-top: 1px solid rgba(200,164,78,0.2); border-right: 1px solid rgba(200,164,78,0.2); }
+  .corner-bl { bottom: 60px; left: 60px; border-bottom: 1px solid rgba(200,164,78,0.2); border-left: 1px solid rgba(200,164,78,0.2); }
+  .corner-br { bottom: 60px; right: 60px; border-bottom: 1px solid rgba(200,164,78,0.2); border-right: 1px solid rgba(200,164,78,0.2); }
+
+  /* Logo bottom right */
+  .logo {
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+  }
+
+  .logo-mark {
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, #C8A44E, #B8943E);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px; color: #0A0A0A;
+  }
+
+  .logo-text {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: rgba(200,164,78,0.5);
+    letter-spacing: 0.5px;
+  }
+
+  .logo-text em {
+    font-style: normal;
+    color: rgba(200,164,78,0.7);
+  }
+
+  /* Date hint */
+  .date-hint {
+    position: absolute;
+    bottom: 86px;
+    left: 80px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: rgba(200,164,78,0.25);
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="corner corner-bl"></div>
+  <div class="corner corner-br"></div>
+
+  <div class="line-top"></div>
+  <div class="line-bottom"></div>
+
+  <div class="content">
+    <div class="main-text"><span>SOMETHING<br>IS COMING.</span></div>
+    <div class="sub-text">pay attention.</div>
+  </div>
+
+  <div class="date-hint">03.03.2026</div>
+
+  <div class="logo">
+    <div class="logo-mark">A</div>
+    <div class="logo-text">REALTY <em>ONE</em> GROUP AUTHENTIC</div>
+  </div>
+</body>
+</html>
