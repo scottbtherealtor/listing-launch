@@ -31,7 +31,7 @@ This repository contains all source code for the program's marketing assets, age
 | **Border Radius** | Sharp corners on cards (edgy, not corporate) |
 | **Vibe** | Premium streetwear, not corporate. Bold, raw, high-contrast. |
 
-Full branding spec: [ROG_Authentic_Branding_Guide.txt](./docs/ROG_Authentic_Branding_Guide.txt)
+Full branding spec: [[ROG_Authentic_Branding_Guide.txt](./docs/ROG_Authentic_Branding_Guide.txt)](https://github.com/scottbtherealtor/listing-launch/blob/main/ROG_Authentic_Brand_Guidelines_v2)
 
 ---
 
